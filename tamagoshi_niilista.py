@@ -6,6 +6,7 @@ class TamagoshiNiilista(Tamagoshi): # O niilismo é uma corrente filosófica que
         super().__init__(nome)
         self.__negacao_do_sentido_da_vida: int = 0
         self.__negacao_dos_valores_morais: int = 0
+        self.__negacao_da_existencia_de_verdades_absolutas: int = 0
 
     def niilismo_existencial(self): # Questiona o sentido da vida e do universo
         if self.__negacao_do_sentido_da_vida < 25:
@@ -21,3 +22,18 @@ class TamagoshiNiilista(Tamagoshi): # O niilismo é uma corrente filosófica que
         if self.__negacao_dos_valores_morais < 25:
             print("Existem valores morais e éticos absolutos.")
         elif self.__negacao_dos_valores_morais < 50:
+            print("Será que existem valores morais e éticos absolutos?")
+        elif self.__negacao_dos_valores_morais < 75:
+            print("Não existem valores morais e éticos absolutos.")
+        else:
+            print("A moral é um grande conto de fadas.")
+
+    def niilismo_epistemologico(self): # Questiona a exstência de verdades absolutas
+        if self.__negacao_da_existencia_de_verdades_absolutas < 25:
+            print("Existem verdades absolutas.")
+        elif self.__negacao_da_existencia_de_verdades_absolutas < 50:
+            print("Poderiam existir verdades absolutas?")
+        elif self.__negacao_da_existencia_de_verdades_absolutas < 75:
+            print("Não existem verdades absolutas?")
+        else:
+            print("A busca pela verdade é fútil.")
