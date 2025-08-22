@@ -1,3 +1,5 @@
+import random
+
 from tamagoshi import Tamagoshi
 
 
@@ -37,3 +39,19 @@ class TamagoshiNiilista(Tamagoshi): # O niilismo é uma corrente filosófica que
             print("Não existem verdades absolutas?")
         else:
             print("A busca pela verdade é fútil.")
+
+    def tempo_passando(self):
+        self.vida()
+        self.idade += 0.2
+        self.tedio += 2.5
+        self.fome += 5
+        n = random.randint(0,  2)
+        if n == 0:
+            self.__negacao_do_sentido_da_vida += 5
+            self.niilismo_existencial()
+        elif n == 1:
+            self.__negacao_dos_valores_morais += 5
+            self.niilismo_moral()
+        elif n == 2:
+            self.__negacao_da_existencia_de_verdades_absolutas += 5
+            self.niilismo_epistemologico()
